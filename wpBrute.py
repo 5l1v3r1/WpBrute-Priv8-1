@@ -125,7 +125,7 @@ class WordPress_priv8Bf(object):
             j.join()
         if self.flag == 0:
             print self.c + '       [' + self.y + '-' + self.c + '] ' + self.r + site + ' ' \
-                  + self.y + 'OpenCart' + self.c + ' [Not Vuln]'
+                  + self.y + 'wordpress' + self.c + ' [Not Vuln]'
 
     def cls(self):
         linux = 'clear'
