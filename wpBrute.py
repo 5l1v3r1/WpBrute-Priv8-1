@@ -163,7 +163,7 @@ class WordPress_priv8Bf(object):
                 if 'id' not in __InFo:
                     Flag = False
                 else:
-                    Usernamez = __InFo['name']
+                    Usernamez = __InFo['slug']
                     return Usernamez
                 break
         except:
