@@ -1,3 +1,4 @@
+# coding=utf-8
 import threading, time, re, os, sys, json, random
 
 try:
@@ -164,7 +165,7 @@ class WordPress_priv8Bf(object):
                     Flag = False
                 else:
                     Usernamez = __InFo['slug']
-                    return Usernamez
+                    return str(Usernamez).encode('utf-8')
                 break
         except:
             try:
@@ -176,9 +177,9 @@ class WordPress_priv8Bf(object):
                     if '/feed' in username:
                         find = re.findall('/author/(.*)/feed/"', __Check2.text)
                         username2 = find[0]
-                        return username2
+                        return username2.encode('utf-8')
                     else:
-                        return username
+                        return username.encode('utf-8')
             except requests.exceptions.ReadTimeout:
                 return None
 
